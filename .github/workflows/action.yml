@@ -4,13 +4,13 @@ on:
   push:
   schedule:
   # 定时任务
-    - cron: '0 21 * * *'
+    - cron: '0 8,21 * * *'
 
 jobs:
   bot:
     runs-on: ubuntu-latest
     steps:
-    	# clone该仓库到工作流中
+	# clone该仓库到工作流中
       - name: 'Checkout codes'
         uses: actions/checkout@v1
 	# 执行仓库中的脚本文件
